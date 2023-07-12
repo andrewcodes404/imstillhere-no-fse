@@ -1,0 +1,339 @@
+.mega-grid-page-wrapper {
+  // overflow-y: visible;
+  // overflow-x: scroll;
+}
+
+.mega-grid {
+}
+
+.mega-grid__tabs-wrapper {
+  margin-bottom: $space-20;
+  border-bottom: 1px solid $black;
+  @media (min-width: $break-desktop) {
+    margin-bottom: $space-40;
+  }
+}
+
+.mega-grid__tabs {
+  @include content-width;
+  display: flex;
+  max-width: calc(1400px - 120px);
+  padding-top: 24px;
+  @media (min-width: $break-desktop) {
+  }
+}
+
+.mega-grid__tab {
+  display: block;
+  margin-right: 20px;
+  padding: 13px 20px 10px 20px;
+  background-color: $black;
+  border-radius: 6px 6px 0px 0px;
+  color: $white;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  @include font-size(15, 15);
+
+  @media (min-width: $break-desktop) {
+    @include font-size(18, 18);
+    padding: 13px 80px 10px 80px;
+  }
+
+  &:hover {
+    background-color: $light-green;
+    color: $black;
+    transition: 0.4s;
+  }
+
+  &--active {
+    background-color: $green;
+
+    &:hover {
+      background-color: $green;
+      color: $white;
+      transition: none;
+    }
+  }
+}
+
+.mega-grid__titles {
+  @include content-width;
+  max-width: calc(1400px - 120px);
+  margin-bottom: $space-20;
+}
+
+.mega-grid__title {
+  display: none;
+  &--show {
+    display: block;
+  }
+}
+
+// The table --- The table --- The table ---
+
+.mega-grid__desktop {
+  display: none;
+  @media (min-width: $break-desktop) {
+    display: block;
+  }
+}
+
+.mega-grid__table {
+  display: none;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-right: var(--wp--preset--spacing--20) !important;
+  padding-left: var(--wp--preset--spacing--20) !important;
+
+  overflow-x: scroll;
+  &--show {
+    display: block;
+  }
+}
+
+.mega-grid__schedule {
+  @media (min-width: $break-desktop) {
+    // overflow-x: scroll;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-rows:
+      [tracks] auto
+      [time-0915] auto
+      [time-0920] auto
+      [time-0925] auto
+      [time-0930] auto
+      [time-0935] auto
+      [time-0940] auto
+      [time-0945] auto
+      [time-0950] auto
+      [time-0955] auto
+      [time-1000] auto
+      [time-1005] auto
+      [time-1010] auto
+      [time-1015] auto
+      [time-1020] auto
+      [time-1025] auto
+      [time-1030] auto
+      [time-1035] auto
+      [time-1040] auto
+      [time-1045] auto
+      [time-1050] auto
+      [time-1055] auto
+      [time-1100] auto
+      [time-1105] auto
+      [time-1110] auto
+      [time-1115] auto
+      [time-1120] auto
+      [time-1125] auto
+      [time-1130] auto
+      [time-1135] auto
+      [time-1140] auto
+      [time-1145] auto
+      [time-1150] auto
+      [time-1155] auto
+      [time-1200] auto
+      [time-1205] auto
+      [time-1210] auto
+      [time-1215] auto
+      [time-1220] auto
+      [time-1225] auto
+      [time-1230] auto
+      [time-1235] auto
+      [time-1240] auto
+      [time-1245] auto
+      [time-1250] auto
+      [time-1255] auto
+      [time-1300] auto
+      [time-1305] auto
+      [time-1310] auto
+      [time-1315] auto
+      [time-1320] auto
+      [time-1325] auto
+      [time-1330] auto
+      [time-1335] auto
+      [time-1340] auto
+      [time-1345] auto
+      [time-1350] auto
+      [time-1355] auto
+      [time-1400] auto
+      [time-1405] auto
+      [time-1410] auto
+      [time-1415] auto
+      [time-1420] auto
+      [time-1425] auto
+      [time-1430] auto
+      [time-1435] auto
+      [time-1440] auto
+      [time-1445] auto
+      [time-1450] auto
+      [time-1455] auto
+      [time-1500] auto
+      [time-1505] auto
+      [time-1510] auto
+      [time-1515] auto
+      [time-1520] auto
+      [time-1525] auto
+      [time-1530] auto
+      [time-1535] auto
+      [time-1540] auto
+      [time-1545] auto
+      [time-1550] auto
+      [time-1555] auto
+      [time-1600] auto
+      [time-1605] auto
+      [time-1610] auto
+      [time-1615] auto
+      [time-1620] auto
+      [time-1625] auto
+      [time-1630] auto
+      [time-1635] auto
+      [time-1640] auto
+      [time-1645] auto
+      [time-1650] auto
+      [time-1655] auto
+      [time-1700] auto
+      [time-1705] auto
+      [time-1710] auto
+      [time-1715] auto
+      [time-1720] auto
+      [time-1725] auto
+      [time-1730] auto
+      [time-1735] auto
+      [time-1740] auto
+      [time-1745] auto
+      [time-1750] auto
+      [time-1755] auto;
+    /* Note 1:
+      Use 24hr time for gridline names for simplicity
+
+      Note 2: Use "auto" instead of "1fr" for a more compact schedule where height of a slot is not proportional to the session length. Implementing a "compact" shortcode attribute might make sense for this!
+      Try 0.5fr for more compact equal rows. I don't quite understand how that works :)
+      */
+
+    grid-template-columns:
+      [times] 50px
+      [track-1-start] 150px
+      [track-1-end track-2-start] 155px
+      [track-2-end track-3-start] 155px
+      [track-3-end track-4-start] 155px
+      [track-4-end track-5-start] 155px
+      [track-5-end track-6-start] 155px
+      [track-6-end track-7-start] 155px
+      [track-7-end];
+
+  }
+}
+
+.mega-grid__time-slot {
+  display: none;
+  @media (min-width: $break-desktop) {
+    display: block;
+    margin: 0;
+    font-size: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    grid-column: times;
+  }
+}
+
+.mega-grid__track-head {
+  display: none;
+  margin-bottom: 20px;
+
+  color: $black;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  @media (min-width: $break-desktop) {
+    @supports (display: grid) {
+      @include background-color;
+      @include colour-pick-text;
+      @include hover-small;
+      display: block;
+      padding: 10px 10px 14px;
+      border-radius: 6px;
+    }
+  }
+
+  &:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &--green,
+  &--netzero,
+  &--keynote,
+  &--blue,
+  &--innovation,
+  &--purple,
+  &--buildings,
+  &--pink,
+  &--change,
+  &--rust,
+  &--finance {
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+// Sessions --- Sessions --- Sessions ---
+// Sessions --- Sessions --- Sessions ---
+// Sessions --- Sessions --- Sessions ---
+
+.mega-grid-track__session {
+  @include background-color;
+  @include colour-pick-text;
+  @include hover-small;
+  margin-bottom: 1em;
+  padding: 2px 5px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  @media (min-width: $break-desktop) {
+    margin-bottom: 0;
+  }
+  transition: 0.4s;
+  &:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &--green,
+  &--netzero,
+  &--keynote,
+  &--blue,
+  &--innovation,
+  &--purple,
+  &--buildings,
+  &--pink,
+  &--change,
+  &--rust,
+  &--finance {
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.mega-grid-track__session--desktop {
+  display: none;
+  @media (min-width: $break-desktop) {
+    display: block;
+  }
+}
+
+.mega-grid-track__session-title {
+  text-decoration: none;
+}
+
+.mega-grid-track__session-time {
+  display: block;
+  margin-top: 8px;
+  font-weight: 400;
+}

@@ -1,0 +1,51 @@
+// Modifying on top of _single.scss
+
+body.single-sessions-2023 {
+  .wp-block-post-navigation-link {
+    a {
+      color: $green;
+    }
+
+    margin-bottom: 12px;
+
+    @media (min-width: $break-tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .post-navigation-link-previous {
+    a {
+      &:before {
+        background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/arrow-green--left.svg');
+      }
+    }
+
+    @media (min-width: $break-tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  .post-navigation-link-next {
+    a {
+      &:before {
+        background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/arrow-green--right.svg');
+      }
+    }
+    @media (min-width: $break-tablet) {
+      margin-right: 20px;
+    }
+  }
+
+  .wp-element-button,
+  .wp-block-button__link {
+    transition: 0.4s;
+    &:hover {
+      background-color: $light-green;
+      color: $black;
+    }
+
+    @media (min-width: $break-tablet) {
+      margin-right: 20px;
+    }
+  }
+}

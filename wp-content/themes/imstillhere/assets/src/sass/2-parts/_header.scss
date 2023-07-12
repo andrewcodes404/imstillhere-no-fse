@@ -1,0 +1,360 @@
+/* stylelint-disable */
+
+// phantom space for the top-bar and nav
+
+.page {
+  .wp-block-post-content {
+    padding-top: 115px !important;
+    @media (min-width: $break-tablet) {
+      padding-top: 145px !important;
+    }
+
+    @media (min-width: $break-desktop-med) {
+      padding-top: 160px !important;
+    }
+  }
+}
+
+// The top bar --- The top bar --- The top bar --- The top bar ---
+.rt-top-bar {
+  position: fixed !important;
+  z-index: 3;
+  width: 100% !important;
+
+  .wp-block-image {
+    display: none;
+  }
+
+  @media (min-width: $break-tablet) {
+    .wp-block-image {
+      display: block;
+    }
+  }
+
+  .wp-block-button__link {
+    padding: 10px !important;
+    font-size: 15px !important;
+    @media (min-width: $break-tablet) {
+      padding: 15px !important;
+      font-style: 17px !important;
+    }
+  }
+
+  .wp-element-button:hover,
+  .wp-block-button__link:hover {
+    background-color: $light-green !important;
+  }
+
+  &__logo-mobile {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: block;
+      width: 143px;
+      height: 34px;
+      margin: 0 auto;
+      background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/logos/rt-logo--white.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    @media (min-width: $break-tablet) {
+      display: none;
+    }
+  }
+
+  &__logo-desktop {
+    display: none;
+    align-items: center;
+
+    a {
+      display: block;
+      width: 180px;
+      height: 76px;
+      margin: 0 auto;
+      background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/logos/rt-logo-with-text--green.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    @media (min-width: $break-tablet) {
+      display: flex;
+    }
+  }
+}
+
+// Mobile Takeover --- Mobile Takeover --- Mobile Takeover ---
+.wp-block-navigation__responsive-container {
+  background-color: $green !important;
+  color: $white !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+
+  .wp-block-navigation__responsive-container-close {
+    top: $space-20;
+    font-weight: bold;
+  }
+
+  .wp-block-navigation__container {
+    li {
+      color: $white;
+      font-size: 18px !important;
+      a {
+        color: $white;
+      }
+    }
+
+    // .wp-block-navigation-item {}
+  }
+}
+// Mobile Takeover - submenu
+.wp-block-navigation-submenu {
+  .wp-block-navigation-item {
+    margin-bottom: 15px;
+
+    a {
+      padding-left: 15px;
+      line-height: 1;
+      &:before {
+        padding-right: 10px;
+        content: '- ';
+      }
+
+      @media (min-width: $break-desktop) {
+        &:before {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+// Nav Desktop --- Nav Desktop --- Nav Desktop --- Nav Desktop ---
+
+// Items in the nav bar
+.wp-block-navigation .wp-block-navigation-item__label {
+  font-weight: 700;
+  @include font-size(16, 16);
+
+  @media (min-width: $break-desktop-med) {
+    @include font-size(18, 18);
+  }
+}
+
+.rt-navigation {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+
+  @media (min-width: $break-tablet) {
+    top: 100px;
+  }
+
+  &--shadow {
+    box-shadow: 5px 5px 19px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .wp-block-image {
+    @media (min-width: $break-tablet) {
+      display: none;
+    }
+  }
+
+  li {
+    a {
+      font-weight: 800;
+      transition: 0.4s;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    margin-right: 5px;
+    @media (min-width: $break-desktop-wide) {
+      margin-right: 20px;
+    }
+  }
+  .wp-block-navigation-item__label {
+    font-weight: 800;
+  }
+}
+
+.admin-bar {
+  .rt-navigation {
+    top: 120px;
+    @media (min-width: $break-tablet) {
+      top: 132px;
+    }
+  }
+}
+
+.wp-block-navigation .has-child .wp-block-navigation-submenu__toggle[aria-expanded='true'] {
+  &:after {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, 0.6);
+    content: '';
+    animation: fadeIn ease 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &:before {
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($black, 0.6);
+    content: '';
+    animation: fadeIn ease 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+.wp-block-navigation
+.has-child
+.wp-block-navigation-submenu__toggle[aria-expanded='true']
+~ .wp-block-navigation__submenu-container {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  left: -20px;
+  z-index: 1;
+  width: 300px;
+  padding: 10px 0;
+  background-color: $light-green;
+  border: none;
+
+  @media (min-width: $break-desktop-wide) {
+    top: 64px;
+  }
+
+  &:before {
+    position: absolute;
+    top: -22px;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100% + 22px);
+    background-color: $light-green;
+    content: '';
+  }
+
+  &:after {
+    position: absolute;
+    top: -22px;
+    bottom: 20px;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100% + 22px);
+    background-color: $light-green;
+
+    content: '';
+  }
+  li {
+    margin-bottom: 16px;
+    a {
+      color: $green;
+      font-size: 18px;
+      font-weight: 800;
+      font-weight: 700;
+      line-height: 22px;
+      transition: 0.4s;
+    }
+
+    &.rt-menu-link-title {
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.wp-block-navigation-submenu {
+  .wp-block-navigation__submenu-icon {
+    svg {
+      display: none;
+    }
+    width: 15px;
+    height: 15px;
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    transition: 0.4s;
+
+    @media (min-width: $break-desktop-wide) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.wp-block-navigation
+.has-child
+.wp-block-navigation-submenu__toggle[aria-expanded='true']
+~ .wp-block-navigation__submenu-icon {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+// CHANGE MEDIA QUERY FOR HAMBURGER
+/* copy of wp default css to a 1000px media query */
+@media (min-width: 1000px) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none !important;
+  }
+
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    position: relative;
+    z-index: auto;
+    display: block !important;
+    width: 100%;
+    background-color: inherit;
+  }
+}
+
+/* neutralize the wp default for 600px */
+@media (min-width: 600px) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+}
+
+// Update hamburger
+nav:has(.wp-block-navigation__responsive-container-open) {
+  @media (min-width: $break-tablet) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1000px) {
+    margin-left: unset;
+  }
+}
+
+.wp-block-navigation__responsive-container-open {
+  @media (min-width: $break-tablet) {
+    margin-left: auto;
+    &:before {
+      margin-right: 5px;
+      font-weight: bold;
+      content: 'menu';
+    }
+  }
+}
+/* stylelint-enable  */

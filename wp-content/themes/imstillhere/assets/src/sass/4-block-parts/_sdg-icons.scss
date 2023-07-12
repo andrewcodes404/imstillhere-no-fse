@@ -1,0 +1,18 @@
+.rt-sdgs {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    width: 60px;
+    margin-right: $space-10;
+    margin-bottom: $space-10;
+    border-radius: 6px;
+  }
+
+  @media (min-width: $break-desktop) {
+    img {
+      width: 90px;
+      margin-right: $space-20;
+      margin-bottom: $space-20;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.rt-socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $space-10;
+  margin-bottom: $space-20;
+  @media (min-width: $break-desktop) {
+    margin-top: 0;
+  }
+}
+.rt-social {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  margin-right: $space-10;
+  margin-bottom: $space-10;
+  background-repeat: no-repeat;
+
+  background-position: 0 0;
+  background-size: cover;
+
+  transition: 0.4s;
+
+  cursor: pointer;
+  &:hover {
+    color: $green;
+    transform: translateY(-7px) scale(1.07);
+  }
+
+  @media (min-width: $break-desktop) {
+    width: 33px;
+    height: 33px;
+
+    margin-bottom: $space-10;
+  }
+
+  &--website {
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/icon-website-globe--black.svg');
+  }
+  &--linkedin {
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/icon-linkedin--black.svg');
+  }
+  &--facebook {
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/icon-fb--black.svg');
+  }
+  &--instagram {
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/icon-insta--black.svg');
+  }
+  &--twitter {
+    background-image: url('/wp-content/themes/rethink-block-theme/assets/src/images/icons/icon-twitter--black.svg');
+  }
+}

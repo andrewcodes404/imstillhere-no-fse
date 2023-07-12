@@ -1,0 +1,141 @@
+.rt-programme-session {
+  margin-bottom: 20px;
+  background-color: $white;
+
+  border-radius: 6px;
+}
+
+.rt-programme-session__top-bar {
+  display: flex;
+  align-items: center;
+  padding: $space-10 $space-05;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition: 0.5s;
+  cursor: pointer;
+
+  @include background-color;
+  @include colour-pick-text;
+  @media (min-width: $break-desktop) {
+    padding: $space-30 $space-20;
+  }
+}
+
+.rt-programme-session__top-bar__chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 35px;
+  height: 35px;
+  color: $black;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+  @include colour-pick-text;
+  // @include background-color;
+
+}
+
+.rt-programme-session__top-bar__title {
+  padding-left: 10px;
+}
+
+.rt-programme-session__top-bar__chevron--rotate {
+  // color: $green;
+
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+
+.rt-programme-session__content {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.6s;
+  &--show {
+    transition: max-height 0.8s;
+  }
+}
+
+.rt-programme-session__content-inner {
+  padding: $space-10 $space-05 $space-40 $space-05;
+
+  @media (min-width: $break-desktop) {
+    padding: $space-10 $space-10 $space-40 $space-30;
+  }
+}
+
+.rt-programme-session__content-top {
+  @media (min-width: $break-desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.rt-programme-session__time-category {
+  display: flex;
+  margin-right: $space-20;
+
+  @media (min-width: $break-desktop) {
+    display: block;
+  }
+}
+
+.rt-programme-session__time {
+  margin-right: $space-20;
+  p {
+    font-weight: bold;
+  }
+}
+
+.rt-programme-session__category {
+  display: inline-block;
+  margin-bottom: $space-20;
+  padding: 8px 6px;
+  background-color: $green;
+  border-radius: 6px;
+  p {
+    margin: 0;
+    padding: 0;
+    color: $white;
+    font-weight: bold;
+    line-height: 1;
+  }
+  @media (min-width: $break-desktop) {
+    margin-bottom: $space-30;
+  }
+}
+
+// .rt-programme-session__sdg-icons {}
+
+.rt-programme-session__overview {
+  max-width: 800px;
+  margin-bottom: $space-20;
+}
+
+// speakers
+
+.rt-programme-session__speakers {
+  h3 {
+    margin-bottom: $space-20;
+  }
+
+  margin-bottom: $space-40;
+}
+
+// partners and sponsors
+
+.rt-programme-session__sponsors-and-partners {
+  @media (min-width: $break-desktop) {
+    display: flex;
+  }
+}
+
+.rt-programme-session__logos {
+  @media (min-width: $break-desktop) {
+    margin-right: $space-40;
+  }
+}
+
+.rt-programme-session__logos-title {
+  margin-bottom: $space-20;
+}

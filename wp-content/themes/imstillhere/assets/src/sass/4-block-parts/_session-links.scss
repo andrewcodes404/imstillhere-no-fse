@@ -1,0 +1,19 @@
+.rt-session-links {
+  margin-bottom: $space-20;
+  p {
+    font-weight: bold;
+  }
+}
+
+.rt-session-link {
+  display: inline-block;
+  margin-bottom: $space-10;
+  font-weight: 400;
+  transition: 0.4s;
+  @include font-size(20, 24);
+
+  &:hover {
+    background-color: $grey;
+    color: $black;
+  }
+}
