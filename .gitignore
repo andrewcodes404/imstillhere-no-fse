@@ -255,3 +255,6 @@ wp-content/mu-plugins/wpe-wp-sign-on-plugin*
 *.asf
 *.wmv
 *.avi
+
+
+local-xdebuginfo.php
