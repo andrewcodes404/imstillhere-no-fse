@@ -1,59 +1,13 @@
-@import '0-lib/reset';
-@import '0-lib/tiny-slider';
+// @import '0-lib/reset';
 
-@import '1-base/mixins';
-@import '1-base/variables';
-@import '1-base/layout';
-@import '1-base/typography';
-@import '1-base/animation';
+// @import '1-base/mixins';
+// @import '1-base/variables';
+// @import '1-base/layout';
+// @import '1-base/typography';
+// @import '1-base/animation';
 
-@import '2-parts/blogs';
-@import '2-parts/header';
+// @import '01-includes/nav';
 
-@import '3-templates/home';
-@import '3-templates/footer';
-@import '3-templates/single';
-@import '3-templates/single-session';
-
-@import '4-block-parts/modal-logo';
-@import '4-block-parts/modal-speaker';
-@import '4-block-parts/programme-partners';
-@import '4-block-parts/programme-session';
-@import '4-block-parts/programme-speakers';
-@import '4-block-parts/programme-logos';
-@import '4-block-parts/sdg-icons';
-@import '4-block-parts/session-links';
-@import '4-block-parts/socials';
-
-@import '5-blocks/accordion';
-@import '5-blocks/anchor-tabs';
-@import '5-blocks/carousel';
-@import '5-blocks/cta';
-@import '5-blocks/hero';
-@import '5-blocks/icon-banner';
-@import '5-blocks/icon-title';
-@import '5-blocks/jump-link-target';
-@import '5-blocks/list-speakers';
-@import '5-blocks/logos';
-
-@import '5-blocks/programme';
-@import '5-blocks/mega-grid';
-@import '5-blocks/mega-grid-mobile';
-@import '5-blocks/theatre-button';
-@import '5-blocks/hero-single-session';
-
-@import '5-blocks/single-session';
-@import '5-blocks/single-speaker';
 @import '5-blocks/youtube';
 
-@import '6-vendor/pop-up';
-@import '6-vendor/gravity-forms';
-
-// /additonal classes for use in wp-admin
-.pb-0 {
-  padding-bottom: 0 !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
+// @import '6-vendor/gravity-forms';

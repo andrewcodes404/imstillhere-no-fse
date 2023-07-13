@@ -1,0 +1,36 @@
+{
+  "name": "youtube",
+  "title": "youtube",
+  "description": "A custom Rethink block",
+  "category": "rethink-blocks",
+  "icon": "admin-comments",
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "/youtube.php"
+  },
+  "align": "full",
+  "supports": {
+    "mode": false,
+    "align": false,
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": true,
+      "link": false
+    },
+    "alignText": false,
+    "spacing": false,
+    "typography": {
+      "lineHeight": false,
+      "fontSize": false
+    },
+    "fullHeight": false
+  },
+  "spacing": {
+    "padding": [
+      "top",
+      "bottom"
+    ]
+  }
+}
